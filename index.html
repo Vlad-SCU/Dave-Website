@@ -1,0 +1,983 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M30,20 L70,20 L50,50 L70,80 L30,80' fill='none' stroke='%233E7090' stroke-width='12' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Streamline Digital Imaging | Custom Printing in Snohomish County</title>
+    <meta name="description" content="Streamline Digital Imaging is a local, family-owned print shop for custom apparel, stickers, banners, embroidery, team stores, and in-house production in Snohomish County." />
+    <link rel="stylesheet" href="/src/style.css" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Streamline Digital Imaging | Custom Printing Snohomish, WA" />
+    <meta property="og:description" content="Premium custom printing, embroidery, stickers, and team stores. Located in Snohomish, WA. 100% in-house production." />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Streamline Digital Imaging" />
+    <meta name="twitter:description" content="Local family-owned custom printing & graphics shop in Snohomish, WA. Screen printing, embroidery, decals, and signs." />
+
+    <!-- GSAP CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      
+      <!-- Sticky Navigation Bar -->
+      <header class="navbar" id="main-nav">
+        <div class="container container-navbar">
+          
+          <!-- Brand Logo -->
+          <a href="#" class="navbar-logo__wrapper" id="brand-logo">
+            <img src="/assets/streamline-logo.png" alt="Streamline Digital Imaging" class="navbar-brand-logo">
+          </a>
+          
+          <!-- Desktop Menu -->
+          <nav class="navbar-menu" id="nav-menu">
+            <ul class="navbar-links" id="navbar-links-list">
+              <li><a href="#" class="hover-link active">Home</a></li>
+              <li><a href="#services" class="hover-link">Services</a></li>
+              <li><a href="#stores" class="hover-link">Stores</a></li>
+              <li><a href="#who-we-serve" class="hover-link">Who We Serve</a></li>
+              <li><a href="#about" class="hover-link">Our Shop</a></li>
+              <li><a href="#contact" class="hover-link">Contact</a></li>
+            </ul>
+          </nav>
+          
+          <div class="navbar-cta-wrapper">
+            <a href="#quick-buy" class="btn btn-secondary" id="navbar-stickers-btn" data-open-order="stickers">Stickers Quick Buy</a>
+            <button class="btn btn-primary" id="navbar-cta-btn" type="button" data-open-order="custom">Order</button>
+          </div>
+          
+          <!-- Hamburger menu for mobile -->
+          <button class="navbar-menu__button" id="menu-toggle-btn" aria-label="Toggle Navigation Menu">
+            <span class="navbar-menu__button-line is--top"></span>
+            <span class="navbar-menu__button-line is--bottom"></span>
+          </button>
+          
+        </div>
+      </header>
+
+      <!-- Main Layout Sections -->
+      <main class="main-wrapper">
+        
+        <!-- Hero Section Overhaul (Centred title with full-width loop video) -->
+        <section class="section hero-section-overhaul">
+          <div class="container is--home-hero">
+            <div class="home-hero">
+              <div class="home-hero__title">
+                <h1 class="hero-headline" id="hero-title"><span class="hero-custom">CUSTOM</span> PRINTING,<br>FINISHED <span class="text-slanted">IN-HOUSE.</span></h1>
+                <p class="hero-subtitle">Family-owned Snohomish County print shop</p>
+              </div>
+              <div class="home-hero__asset-wrapper" id="hero-asset-card">
+                <!-- Alignment targets -->
+                <div class="registration-target tl-target" style="top: -12px; left: -12px; position: absolute; z-index: 10;">⊕</div>
+                <div class="registration-target tr-target" style="top: -12px; right: -12px; position: absolute; z-index: 10;">⊕</div>
+                <div class="registration-target bl-target" style="bottom: -12px; left: -12px; position: absolute; z-index: 10;">⊕</div>
+                <div class="registration-target br-target" style="bottom: -12px; right: -12px; position: absolute; z-index: 10;">⊕</div>
+                <div class="print-tape" style="position: absolute; top: 16px; left: 16px; z-index: 10;">PROOF: LIVE RUN #01</div>
+                
+                <div class="home-hero__asset">
+                  <video autoplay loop muted playsinline webkit-playsinline class="absolute-cover">
+                    <source src="/assets/printing-machine-v2.mp4" type="video/mp4">
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="ribbon-section">
+          <div class="container">
+            <div class="ribbon-title">⊕ PRINT SHOP SPECIFICATION DIRECTORY ⊕</div>
+          </div>
+          <div class="ribbon-banner">
+            <div class="ribbon-track-wrapper">
+              <div class="ribbon-track" id="school-ribbon">
+                <!-- Item sequence (duplicated for seamless transition loop) -->
+                <div class="ribbon-item">
+                  <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5V20h16V9.5L12 4 4 9.5Z" /><path d="M9 21V14h6v7" /></svg>
+                  Team stores
+                </div>
+                <div class="ribbon-item">
+                  <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="16" rx="3" /><path d="M8 8h8" /><path d="M8 12h8" /></svg>
+                  Stickers and decals
+                </div>
+                <div class="ribbon-item">
+                  <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10l2 4v12H5V8l2-4Z" /><path d="M7 8h10" /></svg>
+                  Custom apparel
+                </div>
+                <div class="ribbon-item">
+                  <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4l-8 8-4 1 1-4 8-8 3 3Z" /><path d="M7 11l4 4" /></svg>
+                  Embroidery
+                </div>
+                <div class="ribbon-item">
+                  <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4v16" /><path d="M6 4h10l-2 4 2 4H6" /><path d="M6 12h10l-2 4" /></svg>
+                  Banners and signs
+                </div>
+                <div class="ribbon-item">
+                  <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s6-4.5 6-9a6 6 0 0 0-12 0c0 4.5 6 9 6 9Z" /><path d="M12 8s1.5 1.5 0 3-1.5 1.5-1.5 3" /></svg>
+                  Heat press
+                </div>
+                <div class="ribbon-item">
+                  <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z" /><path d="M12 2v3" /><path d="M12 19v3" /><path d="M2 12h3" /><path d="M19 12h3" /></svg>
+                  In-house finishing
+                </div>
+                <div class="ribbon-item">
+                  <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10v18H7z" /><path d="M12 12l4-4" /><path d="M12 12l4 4" /></svg>
+                  Walk-in orders
+                </div>
+                <!-- Duplicated track for loop -->
+                <div class="ribbon-item">
+                  <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5V20h16V9.5L12 4 4 9.5Z" /><path d="M9 21V14h6v7" /></svg>
+                  Team stores
+                </div>
+                <div class="ribbon-item">
+                  <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="16" rx="3" /><path d="M8 8h8" /><path d="M8 12h8" /></svg>
+                  Stickers and decals
+                </div>
+                <div class="ribbon-item">
+                  <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4h10l2 4v12H5V8l2-4Z" /><path d="M7 8h10" /></svg>
+                  Custom apparel
+                </div>
+                <div class="ribbon-item">
+                  <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 4l-8 8-4 1 1-4 8-8 3 3Z" /><path d="M7 11l4 4" /></svg>
+                  Embroidery
+                </div>
+                <div class="ribbon-item">
+                  <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4v16" /><path d="M6 4h10l-2 4 2 4H6" /><path d="M6 12h10l-2 4" /></svg>
+                  Banners and signs
+                </div>
+                <div class="ribbon-item">
+                  <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s6-4.5 6-9a6 6 0 0 0-12 0c0 4.5 6 9 6 9Z" /><path d="M12 8s1.5 1.5 0 3-1.5 1.5-1.5 3" /></svg>
+                  Heat press
+                </div>
+                <div class="ribbon-item">
+                  <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z" /><path d="M12 2v3" /><path d="M12 19v3" /><path d="M2 12h3" /><path d="M19 12h3" /></svg>
+                  In-house finishing
+                </div>
+                <div class="ribbon-item">
+                  <svg class="ribbon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h10v18H7z" /><path d="M12 12l4-4" /><path d="M12 12l4 4" /></svg>
+                  Walk-in orders
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Bento Grid Services -->
+        <section class="section bento-section" id="services">
+          <div class="container-bento">
+            <div class="bento-header">
+              <div class="print-tape" style="margin-bottom: 1.5rem;">PRODUCTION STATUS: ACTIVE</div>
+              <h2 class="about-title-bold"><span class="text-outline">COMPLETE</span> PRODUCTION <span class="text-slanted">SHOP.</span></h2>
+              <p class="text-muted-style" style="margin-top: 1rem;">State-of-the-art print and decoration tools managed directly in-house.</p>
+            </div>
+            
+            <div class="bento-grid-overhaul">
+
+                <!-- Card 1: Design & Proofs (now full-bleed image) -->
+                <div class="bento-card bezier-card scroll-reveal-card has-image gc-1">
+                  <img src="/assets/apparel_mockup.png" alt="Design and proofs mockup" class="bento-img-overlay bezier-full-img">
+                  <div class="bento-card__content">
+
+                    <h3>Design &amp; Proofs</h3>
+                    <p>Artwork review, cleanup, production-ready files, digital proofs, and practical guidance.</p>
+                  </div>
+                </div>
+
+                <!-- Card 2: Embroidery -->
+                <div class="bento-card scroll-reveal-card has-image embroidery-card gc-2">
+                  <img src="/assets/ig-embroidered-hat.jpg" alt="Detailed custom logo embroidery" class="bento-img-overlay embroidery-img">
+                  <div class="bento-card__content">
+
+                    <h3>Embroidery</h3>
+                    <p>Polos, hats, jackets, bags, and spirit wear with premium details.</p>
+                  </div>
+                </div>
+
+                <!-- Card 3: Custom Apparel -->
+                <div class="bento-card scroll-reveal-card apparel-card has-image gc-3">
+                  <img src="/assets/ig-softball-hoodie.jpg" alt="Custom printed apparel display" class="bento-img-overlay apparel-full-img">
+                  <div class="bento-card__content">
+
+                    <h3>Custom Apparel</h3>
+                    <p>Screen printed tees, hoodies, uniforms, staff gear, hats, and jackets with sorted pickup or shipping.</p>
+                  </div>
+                </div>
+
+                <!-- Card 4: Local Accountability -->
+                <div class="bento-card squeegee-card scroll-reveal-card accountability-card has-image gc-4">
+                  <img src="/streamline-website-v4-polished-20260601-221903%20(3)/assets/ig-shop-sign.jpg" alt="Local production showroom" class="bento-img-overlay">
+                  <div class="bento-card__content">
+                    <h3>Local Accountability</h3>
+                    <p>Our Snohomish team operates automatic screen printers, DTF printers, and embroidery rigs.</p>
+                  </div>
+                  <div class="squeegee-simulation-container">
+                    <div class="squeegee-instructions">Click and drag screen to print t-shirt!</div>
+                    <canvas id="squeegee-canvas" width="600" height="180"></canvas>
+                  </div>
+                </div>
+
+                <!-- Card 5: Online Team Stores -->
+                <div class="bento-card map-card scroll-reveal-card stores-card has-image gc-5">
+                  <img src="/streamline-website-v4-polished-20260601-221903%20(3)/assets/ig-night-banner.jpg" alt="Online team stores" class="bento-img-overlay">
+                  <div class="bento-card__content">
+
+                    <h3>Online Team Stores</h3>
+                    <p>Running ~148 connected web stores. Leagues and booster groups order online for sorted pickup.</p>
+                  </div>
+                </div>
+
+                <!-- Card 6: Stickers & Decals -->
+                <div class="bento-card scroll-reveal-card has-image stickers-card gc-6">
+                  <img src="/assets/ig-stickers-cups.jpg" alt="Colorful custom vinyl stickers" class="bento-img-overlay">
+                  <div class="bento-card__content">
+                    <h3>Stickers &amp; Decals</h3>
+                    <p>Die-cut vinyl stickers, safety labels, window decals, vehicle decals, and art cleanup.</p>
+                  </div>
+                </div>
+              
+            </div>
+          </div>
+        </section>
+
+        <!-- Elastic Shaped Cards Flex Row (Re-structured use cases block) -->
+        <section class="section shape-section" id="who-we-serve">
+          <div class="container is--2x-padding is--usecases">
+            <div class="shape-header">
+              <div class="print-tape" style="margin-bottom: 1.5rem;">DISTRIBUTION MARGINS</div>
+              <h2 class="about-title-bold">DESIGNED FOR <span class="text-outline">OUR</span> <span class="text-slanted">COMMUNITY.</span></h2>
+              <p class="text-muted-style" style="margin-top: 1rem;">Providing custom print services to organizations across Snohomish County.</p>
+            </div>
+            
+            <div class="home-use__cases is--desktop">
+              <div class="home-use__cases-flex">
+                
+                <!-- Shape Card 1: Schools & Sports -->
+                <div class="home-use__case">
+                  <div class="home-use__case-shape is--1">
+                    <svg class="home-use__shape-image is--bottom" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M 0 100 C 10 30, 90 30, 100 100 Z" fill="var(--accent-blue)" />
+                    </svg>
+                    <div class="home-use__shape-text is--top-left">
+                      <h3 class="h3">Schools &amp;<br>Sports</h3>
+                      <p class="use-case-desc">High school spirit wear, sports uniforms, band apparel, and event tees. We support schools like Glacier Peak High and Snohomish High with high-volume quality.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Shape Card 2: Leagues & Clubs -->
+                <div class="home-use__case">
+                  <div class="home-use__case-shape is--2">
+                    <svg class="home-use__shape-image is--top" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="50" cy="50" r="50" fill="var(--accent-gold)" />
+                    </svg>
+                    <div class="home-use__shape-text is--center">
+                      <h3 class="h3">Leagues &amp;<br>Clubs</h3>
+                      <p class="use-case-desc">Youth soccer, Little League baseball, basketball, and select travel sports clubs. We provide coordinate gear bags, player kits, and parent hoodies.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Shape Card 3: Businesses -->
+                <div class="home-use__case">
+                  <div class="home-use__case-shape is--3">
+                    <svg class="home-use__shape-image is--bottom" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M 0 100 C 0 50, 100 50, 100 100 Z" fill="var(--text-charcoal)" />
+                    </svg>
+                    <div class="home-use__shape-text is--top-left">
+                      <h3 class="h3">Local<br>Businesses</h3>
+                      <p class="use-case-desc">Embroidered corporate polos, hats, branded jackets, labels, and company signage. Helping Snohomish County small businesses establish high-end brand identities.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Shape Card 4: Community & Fundraisers -->
+                <div class="home-use__case">
+                  <div class="home-use__case-shape is--4">
+                    <svg class="home-use__shape-image is--top" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M 0 0 H 100 V 100 C 100 45, 55 0, 0 0 Z" fill="var(--bg-cream-dark)" />
+                    </svg>
+                    <svg class="home-use__shape-image is--bottom is--right" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M 0 100 Q 50 50, 100 100 Z" fill="var(--accent-gold)" />
+                    </svg>
+                    <div class="home-use__shape-text is--center">
+                      <h3 class="h3">Booster &amp;<br>Nonprofits</h3>
+                      <p class="use-case-desc">Event signage, volunteer jerseys, nonprofit custom merch runs, and local booster club fundraising projects that require quick local turnarounds.</p>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Our Shop / About Section Overhaul -->
+        <section class="section about-section-overhaul" id="about">
+          <!-- SVG CMYK Color Separation Filters -->
+          <svg class="about-svg-filters" width="0" height="0" style="position: absolute; pointer-events: none;">
+            <defs>
+              <filter id="cmyk-cyan" color-interpolation-filters="sRGB">
+                <feColorMatrix type="matrix" values="
+                  0 0 0 0 0
+                  0 1 0 0 0
+                  0 0 1 0 0
+                  0 0 0 1 0
+                "/>
+              </filter>
+              <filter id="cmyk-magenta" color-interpolation-filters="sRGB">
+                <feColorMatrix type="matrix" values="
+                  1 0 0 0 0
+                  0 0 0 0 0
+                  0 0 1 0 0
+                  0 0 0 1 0
+                "/>
+              </filter>
+              <filter id="cmyk-yellow" color-interpolation-filters="sRGB">
+                <feColorMatrix type="matrix" values="
+                  1 0 0 0 0
+                  0 1 0 0 0
+                  0 0 0 0 0
+                  0 0 0 1 0
+                "/>
+              </filter>
+            </defs>
+          </svg>
+
+          <!-- Stylized background marks representing print alignment marks -->
+          <div class="about-bg-grid"></div>
+          <div class="about-bg-registration top-left">⊕</div>
+          <div class="about-bg-registration top-right">⊕</div>
+          <div class="about-bg-registration bottom-left">⊕</div>
+          <div class="about-bg-registration bottom-right">⊕</div>
+
+          <div class="container">
+            <!-- Giant bold abstract header -->
+            <div class="about-hero-header">
+              <span class="header-tag">STREAMLINE INK LAB</span>
+              <h2 id="about-title" class="about-title-bold">
+                <span class="text-outline">LOCAL</span> ROOTS. 
+                <span class="text-filled">IN-HOUSE</span> 
+                <span class="text-slanted">QUALITY.</span>
+              </h2>
+              <div class="header-line"></div>
+            </div>
+
+            <div class="about-workspace-grid">
+              <!-- Left Column: The Job Clipboard -->
+              <div class="clipboard-wrapper">
+                <div class="clipboard-clip"></div>
+                <div class="production-clipboard">
+                  <!-- Clipboard Header -->
+                  <div class="clipboard-header">
+                    <div class="job-badge">JOB #2009-SNOHOMISH</div>
+                    <div class="job-status-label">STATUS: <span id="job-status-text">AWAITING RUN</span></div>
+                  </div>
+
+                  <!-- Clipboard Content -->
+                  <div class="clipboard-content">
+                    <h3 class="clipboard-doc-title">PRODUCTION SPECIFICATIONS</h3>
+                    
+                    <div class="spec-row">
+                      <span class="spec-label">ESTABLISHED:</span>
+                      <span class="spec-value">Family-Owned Since 2009</span>
+                    </div>
+                    
+                    <div class="spec-row">
+                      <span class="spec-label">MISSION:</span>
+                      <span class="spec-value">Serving Snohomish County teams, schools, businesses, and community groups.</span>
+                    </div>
+
+                    <div class="clipboard-divider"></div>
+
+                    <p class="clipboard-story-text">
+                      Streamline Digital Imaging pairs the friendliness of a local counter with the production discipline customers expect from a professional print partner: clear proofs, honest timelines, and finished work that looks ready for game day, event day, or everyday business use.
+                    </p>
+                    
+                    <p class="clipboard-story-text">
+                      We review every design, create digital proofs for approval, and setup the production machinery directly under the roof of our Snohomish workshop. Core production stays close, which means fewer surprises and better quality checks.
+                    </p>
+
+                    <!-- Specifications Checklist -->
+                    <div class="approval-checklist">
+                      <label class="check-item">
+                        <input type="checkbox" class="retro-checkbox" checked disabled>
+                        <span class="check-text">100% In-house Quality Checked</span>
+                      </label>
+                      <label class="check-item">
+                        <input type="checkbox" class="retro-checkbox" checked disabled>
+                        <span class="check-text">In-house Screen Press Calibrated</span>
+                      </label>
+                      <label class="check-item">
+                        <input type="checkbox" class="retro-checkbox" checked disabled>
+                        <span class="check-text">CMYK Production Ink Palette Verified</span>
+                      </label>
+                    </div>
+
+                    <!-- Stamp Target Area -->
+                    <div class="stamp-target-zone">
+                      <div class="rubber-stamp" id="production-rubber-stamp">
+                        <div class="stamp-border"></div>
+                        <div class="stamp-text-top">STREAMLINE PRINT</div>
+                        <div class="stamp-text-mid">APPROVED</div>
+                        <div class="stamp-text-bot">READY TO RUN</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Clipboard Footer with Stats -->
+                  <div class="clipboard-stats" id="stats-counter-trigger">
+                    <div class="stat-box">
+                      <span class="stat-num count-value" data-target="17">0</span>
+                      <span class="stat-desc">Years Running</span>
+                    </div>
+                    <div class="stat-box">
+                      <span class="stat-num count-value" data-target="148">0</span>
+                      <span class="stat-desc">Team Stores</span>
+                    </div>
+                    <div class="stat-box">
+                      <span class="stat-num count-value" data-target="12">0</span>
+                      <span class="stat-desc">Specialists</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Approve Button -->
+                <button class="btn btn-primary approve-btn" id="btn-approve-production">
+                  <span class="btn-icon">⚡</span> APPROVE PRODUCTION PROOF
+                </button>
+              </div>
+
+              <!-- Right Column: Showroom Visual Showcase -->
+              <div class="press-wrapper">
+                <div class="showroom-photo-frame">
+                  <div class="print-tape" style="position: absolute; top: 16px; left: 16px; z-index: 10;">SHOWROOM RUN #02</div>
+                  <div class="registration-target tl-target" style="top: -12px; left: -12px; position: absolute; z-index: 10;">⊕</div>
+                  <div class="registration-target tr-target" style="top: -12px; right: -12px; position: absolute; z-index: 10;">⊕</div>
+                  <div class="registration-target bl-target" style="bottom: -12px; left: -12px; position: absolute; z-index: 10;">⊕</div>
+                  <div class="registration-target br-target" style="bottom: -12px; right: -12px; position: absolute; z-index: 10;">⊕</div>
+                  
+                  <div class="showroom-image-container">
+                    <img src="/assets/ig-showroom-rack.jpg" alt="Streamline Snohomish Showroom Rack" class="showroom-press-image">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="section carousel-section" id="ugc-slider-container">
+          <div class="container">
+            <div class="shape-header">
+              <div class="print-tape" style="margin-bottom: 1.5rem;">INSPECTED WORKSHOP PROOFS</div>
+              <h2 class="about-title-bold">REAL PRINTS. <span class="text-outline">REAL</span> <span class="text-slanted">QUALITY.</span></h2>
+              <p class="text-muted-style" style="margin-top: 1rem;">Take a look inside our Snohomish production workshop.</p>
+            </div>
+          </div>
+          
+          <!-- Custom mouse cursor badge -->
+          <div class="custom-cursor" id="custom-video-cursor">DRAG</div>
+          
+          <div class="ugc-carousel-track-wrapper cursor-parent" id="carousel-wrapper-drag">
+            <div class="ugc-carousel-track" id="ugc-carousel-track">
+              <!-- Slide 1: team hoodies -->
+              <div class="ugc-carousel-slide">
+                <img src="/assets/ig-softball-hoodie.jpg" alt="Team hoodies finished by Streamline">
+              </div>
+              <!-- Slide 2: uniform pieces -->
+              <div class="ugc-carousel-slide">
+                <img src="/assets/ig-blue-uniform.jpg" alt="Uniform pieces printed by Streamline">
+              </div>
+              <!-- Slide 3: team banners -->
+              <div class="ugc-carousel-slide">
+                <img src="/assets/ig-team-banner.jpg" alt="Custom team banners">
+              </div>
+              <!-- Slide 4: custom mugs -->
+              <div class="ugc-carousel-slide">
+                <img src="/assets/ig-mugs.jpg" alt="Custom printed mugs">
+              </div>
+              <!-- Slide 5: embroidery -->
+              <div class="ugc-carousel-slide">
+                <img src="/assets/ig-embroidered-hat.jpg" alt="Embroidered hats display">
+              </div>
+              <!-- Slide 6: pickup packs -->
+              <div class="ugc-carousel-slide">
+                <img src="/assets/ig-panther-bags.jpg" alt="Team pickup packs sorted and ready">
+              </div>
+              <!-- Slide 7: spirit bundles -->
+              <div class="ugc-carousel-slide">
+                <img src="/assets/ig-backpack.jpg" alt="Custom backpack and spirit wear bundle">
+              </div>
+              <!-- Slide 8: event banners -->
+              <div class="ugc-carousel-slide">
+                <img src="/assets/ig-night-banner.jpg" alt="Large scale graphic event banner at night">
+              </div>
+            </div>
+          </div>
+
+          <!-- Instagram Callout and Compare Slider Wrapper -->
+          <div class="container instagram-and-compare-container" style="margin-top: 5rem; margin-bottom: 2rem;">
+            
+            <!-- Instagram Callout Banner -->
+            <div class="instagram-callout">
+              <span class="instagram-mark" aria-hidden="true"><span></span></span>
+              <div class="instagram-callout-text">
+                <p class="kicker">Shop updates</p>
+                <h3>See current work on Instagram.</h3>
+                <p>New gear, team drops, banners, spirit wear, and seasonal shop projects show up there first.</p>
+              </div>
+              <a class="btn btn-secondary" href="https://www.instagram.com/streamlinedi/" target="_blank" rel="noreferrer">Follow @streamlinedi</a>
+            </div>
+
+            <!-- Before/After Hoodie Compare Slider -->
+            <div class="work-feature">
+              <div class="compare-slider" data-proof-slider-wrap style="--split: 54%;">
+                <img class="compare-before" src="/assets/ig-softball-hoodie.jpg" alt="Finished custom Snohomish softball hoodie">
+                <div class="compare-after">
+                  <img src="/assets/hoodie-before-clean.png" alt="Blank hoodie ready for decoration">
+                </div>
+                <span class="compare-tag before">Blank</span>
+                <span class="compare-tag after">Finished</span>
+                <span class="compare-divider" aria-hidden="true"></span>
+                <input type="range" min="18" max="82" value="54" aria-label="Compare blank hoodie to finished hoodie" data-proof-slider>
+              </div>
+              <div class="work-feature-copy">
+                <div class="print-tape" style="margin-bottom: 1.5rem;">ARTWORK TO APPAREL</div>
+                <h3 class="about-title-bold" style="font-size: 2.25rem; margin-bottom: 1rem; line-height: 1.1;">SLIDE FROM BLANK TO <span class="text-slanted">FINISHED.</span></h3>
+                <p class="text-muted-style" style="margin-bottom: 2rem;">Every apparel job has decisions behind it: garment color, print method, placement, size, and final handoff. Streamline helps sort those details before the run starts.</p>
+                <a class="btn btn-primary" href="#quick-buy" id="start-apparel-order-btn" data-open-order="custom">Start an apparel order</a>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Online Team Stores Finder Section -->
+        <section class="section stores-section" id="stores">
+          <div class="container">
+            <div class="shape-header">
+              <div class="print-tape" style="margin-bottom: 1.5rem;">~148 ACTIVE MERCH WEBSITES</div>
+              <h2 class="about-title-bold">FIND YOUR <span class="text-outline">CUSTOM</span> <span class="text-slanted">STORE.</span></h2>
+              <p class="text-muted-style" style="margin-top: 1rem;">Search by school, team, club, or business and jump straight to the current shop.</p>
+            </div>
+            
+            <div class="finder-panel">
+              <div class="search-wrapper">
+                <input type="search" id="store-search-input" placeholder="Search by school, team, club, or business..." class="form-input search-input" data-store-search>
+              </div>
+              <div class="group-filter" id="store-group-filter" data-group-filter aria-label="Store category filter">
+                <!-- Dynamically populated filter chips -->
+              </div>
+            </div>
+
+            <!-- Featured Stores Strip -->
+            <div class="featured-strip-wrapper">
+              <div class="featured-strip-title">Featured Partner Stores</div>
+              <div class="featured-strip-scroll">
+                <div class="featured-strip" id="featured-stores-strip" data-featured-stores>
+                  <!-- Dynamically populated featured logos -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Store Accordion Directory -->
+            <div class="store-directory" id="store-directory-container" data-store-directory>
+              <!-- Dynamically populated store groups -->
+            </div>
+            
+            <p class="empty-state" id="empty-stores-message" data-empty-stores hidden>No stores match that search yet.</p>
+          </div>
+        </section>
+
+        <!-- Sticker Quick Buy & Calculator Panel -->
+        <section class="section interactive-section" id="quick-buy">
+          <div class="container">
+            <div class="shape-header">
+              <div class="print-tape" style="margin-bottom: 1.5rem;">PRODUCTION COST ESTIMATOR</div>
+              <h2 class="about-title-bold">STICKER PRICE <span class="text-outline">ESTIMATOR.</span></h2>
+              <p class="text-muted-style" style="margin-top: 1rem;">Calculate a quick price estimate for custom die-cut vinyl stickers or start a full custom order for apparel, signage, embroidery, and more.</p>
+            </div>
+
+            <div class="order-tabs" role="tablist" aria-label="Order forms">
+              <button class="tab-button active" type="button" role="tab" aria-selected="true" data-tab="custom">Full Custom Order</button>
+              <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="stickers">Sticker Quick Buy</button>
+            </div>
+
+            <div class="interactive-grid order-grid">
+
+              <div class="calc-panel order-panel">
+                <form class="order-form active" data-panel="custom" id="custom-order-form" aria-label="Full custom order request">
+                  <div class="form-card">
+                    <h3>Customer and project</h3>
+                    <div class="field-grid">
+                      <label><span>Project or job name</span><input name="project" required class="form-input"></label>
+                      <label><span>School, team, business, or group</span><input name="organization" class="form-input"></label>
+                      <label><span>Contact name</span><input name="name" required class="form-input"></label>
+                      <label><span>Email</span><input type="email" name="email" required class="form-input"></label>
+                      <label><span>Phone</span><input type="tel" name="phone" class="form-input"></label>
+                      <label><span>Needed by</span><input type="date" name="date" class="form-input"></label>
+                    </div>
+                  </div>
+
+                  <div class="form-card">
+                    <h3>What are we making?</h3>
+                    <div class="field-grid">
+                      <label>
+                        <span>Project type</span>
+                        <select name="project-type" class="form-select">
+                          <option>Apparel or uniforms</option>
+                          <option>Embroidery</option>
+                          <option>Banners, signs, or posters</option>
+                          <option>Stickers or decals</option>
+                          <option>Team store</option>
+                          <option>Mixed project</option>
+                          <option>Not sure yet</option>
+                        </select>
+                      </label>
+                      <label><span>Estimated quantity</span><input type="number" min="1" value="24" name="quantity" class="form-input"></label>
+                      <label>
+                        <span>Preferred fulfillment</span>
+                        <select name="fulfillment" class="form-select">
+                          <option>Local pickup in Snohomish</option>
+                          <option>Ship to customer</option>
+                          <option>Local delivery or team distribution</option>
+                        </select>
+                      </label>
+                      <label>
+                        <span>Budget range</span>
+                        <select name="budget" class="form-select">
+                          <option>Need a quote</option>
+                          <option>Under $250</option>
+                          <option>$250-$750</option>
+                          <option>$750-$2,000</option>
+                          <option>$2,000+</option>
+                        </select>
+                      </label>
+                    </div>
+                    <div class="choice-grid" aria-label="Production methods">
+                      <label class="checkbox-row"><input type="checkbox" name="method" value="screen-print"><span>Screen print</span></label>
+                      <label class="checkbox-row"><input type="checkbox" name="method" value="embroidery"><span>Embroidery</span></label>
+                      <label class="checkbox-row"><input type="checkbox" name="method" value="heat-transfer"><span>DTF or heat transfer</span></label>
+                      <label class="checkbox-row"><input type="checkbox" name="method" value="wide-format"><span>Wide-format graphics</span></label>
+                      <label class="checkbox-row"><input type="checkbox" name="method" value="not-sure"><span>Help me choose</span></label>
+                    </div>
+                  </div>
+
+                  <div class="form-card">
+                    <h3>Artwork and details</h3>
+                    <label class="dropzone" data-dropzone>
+                      <input type="file" accept="image/*,.pdf,.ai,.eps,.svg,.doc,.docx,.xlsx" data-file-input>
+                      <span>Upload artwork, roster, logo, or notes</span>
+                      <small>PNG, JPG, PDF, SVG, AI, EPS, Word, or Excel. Rough files are okay.</small>
+                    </label>
+                    <div class="file-preview" data-file-preview hidden></div>
+                    <label><span>Order details</span><textarea name="notes" rows="5" placeholder="Products, sizes, colors, print locations, names or numbers, shipping needs, and any special instructions." class="form-input"></textarea></label>
+                    <button class="btn btn-primary" type="submit">Submit custom order</button>
+                    <button class="btn btn-secondary" type="button" data-switch-tab="stickers" style="width: 100%; margin-top: 1rem;">I just need stickers</button>
+                  </div>
+                </form>
+
+                <form class="order-form" data-panel="stickers" id="sticker-calc-form" aria-label="Quick sticker order" hidden>
+                  <div class="form-card">
+                    <h3>Upload sticker artwork</h3>
+                    <label class="dropzone" data-dropzone>
+                      <input type="file" id="sticker-art-file" accept="image/*,.pdf" data-file-input>
+                      <span>Upload your artwork</span>
+                      <small>Logo, sketch, screenshot, PDF, or vector file. Streamline can flag anything that needs cleanup.</small>
+                    </label>
+                    <div class="file-preview" data-file-preview hidden></div>
+                  </div>
+
+                  <div class="form-card">
+                    <h3>Sticker specs</h3>
+                    <div class="field-grid">
+                      <label>
+                        <span>Size</span>
+                        <select data-price-field="size" name="size" class="form-select">
+                          <option value="3 in" data-price="0">3 inch</option>
+                          <option value="4 in" data-price="18">4 inch</option>
+                          <option value="5 in" data-price="36">5 inch</option>
+                          <option value="Custom" data-price="52">Custom size</option>
+                        </select>
+                      </label>
+                      <label>
+                        <span>Quantity</span>
+                        <select data-price-field="quantity" name="quantity" id="sticker-quantity" class="form-select">
+                          <option value="50" data-price="65">50</option>
+                          <option value="100" data-price="95">100</option>
+                          <option value="250" data-price="165" selected>250</option>
+                          <option value="500" data-price="285">500</option>
+                          <option value="1000" data-price="475">1000</option>
+                        </select>
+                      </label>
+                      <label>
+                        <span>Finish</span>
+                        <select data-price-field="finish" name="finish" class="form-select">
+                          <option value="Gloss" data-price="0">Gloss</option>
+                          <option value="Matte" data-price="10">Matte</option>
+                          <option value="Outdoor laminate" data-price="22">Outdoor laminate</option>
+                        </select>
+                      </label>
+                      <label>
+                        <span>Cut style</span>
+                        <select data-price-field="cut" name="cut" class="form-select" id="sticker-cut">
+                          <option value="Contour cut" data-price="0">Contour cut</option>
+                          <option value="Circle" data-price="0">Circle</option>
+                          <option value="Sheet labels" data-price="12">Sheet labels</option>
+                        </select>
+                      </label>
+                    </div>
+                    <div class="choice-grid two-up" aria-label="Sticker fulfillment">
+                      <label class="checkbox-row radio-card"><input type="radio" name="sticker-fulfillment" value="pickup" checked><span>Local pickup</span></label>
+                      <label class="checkbox-row radio-card"><input type="radio" name="sticker-fulfillment" value="shipping"><span>Ship it</span></label>
+                    </div>
+                    <label class="checkbox-row">
+                      <input type="checkbox" data-art-help>
+                      <span>I need help making this art printable</span>
+                    </label>
+                  </div>
+
+                  <div class="form-card">
+                    <h3>Contact and delivery</h3>
+                    <div class="field-grid">
+                      <label><span>Name</span><input name="name" required class="form-input"></label>
+                      <label><span>Email</span><input type="email" name="email" required class="form-input"></label>
+                      <label><span>Phone</span><input type="tel" name="phone" class="form-input"></label>
+                      <label><span>Needed by</span><input type="date" name="date" class="form-input"></label>
+                    </div>
+                    <label><span>Shipping address, if shipping</span><input name="shipping-address" placeholder="Street, city, state, ZIP" class="form-input"></label>
+                    <label><span>Notes</span><textarea name="notes" rows="4" placeholder="Tell us where these will be used, any deadline, or anything unusual about the art." class="form-input"></textarea></label>
+                    <button class="btn btn-primary" type="submit">Submit sticker order request</button>
+                  </div>
+                </form>
+              </div>
+
+              <div class="order-side-wrapper">
+                <aside class="order-sidecard active" data-panel="custom">
+                  <p class="kicker">What happens next</p>
+                  <h3>A real person reviews the details before production.</h3>
+                  <div class="side-steps">
+                    <span><strong>01</strong> Artwork and order details are checked.</span>
+                    <span><strong>02</strong> Streamline follows up with questions, proof, or quote.</span>
+                    <span><strong>03</strong> Once approved, the job moves into production.</span>
+                  </div>
+                  <p>Need fast decals instead of a full custom order?</p>
+                  <button class="btn btn-secondary" type="button" data-switch-tab="stickers">Get stickers now</button>
+                </aside>
+
+                <aside class="estimate-card" data-panel="stickers" hidden>
+                  <div class="sticker-visual-box" id="sticker-3d-card">
+                    <h3>Sticker Preview</h3>
+                    <div class="sticker-visual-preview" id="sticker-preview-circle">
+                      <div class="sticker-sheen" id="sticker-sheen-overlay"></div>
+                      <img src="/assets/sticker_mockup.png" id="sticker-preview-image" alt="Artwork preview">
+                      <span class="preview-badge" id="preview-finish-badge">Glossy</span>
+                    </div>
+                    <div class="sticker-price-block">
+                      <div class="sticker-price-num" id="sticker-calc-total">$145.00</div>
+                      <div class="sticker-price-unit" id="sticker-calc-per-piece">($0.58 each)</div>
+                    </div>
+                  </div>
+                </aside>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- Meet the Team Section -->
+        <section class="section team-section" id="about">
+          <div class="container">
+            <div class="team-layout">
+              <div class="team-header">
+                <div class="print-tape" style="margin-bottom: 1.5rem;">MEET THE TEAM</div>
+                <h2>A local shop team behind the counter, press, cutter, needle, and packing table.</h2>
+                <p>The production team keeps projects moving from first question to final pickup, with art, apparel, stickers, embroidery, finishing, and store orders handled under one local roof.</p>
+              </div>
+
+              <div class="team-grid">
+                <article class="team-card">
+                  <span class="team-avatar">V</span>
+                  <strong>Veronica</strong>
+                  <span>Owner / Shop Lead</span>
+                </article>
+                <article class="team-card">
+                  <span class="team-avatar">D</span>
+                  <strong>Dave</strong>
+                  <span>Shop Minion</span>
+                </article>
+                <article class="team-card">
+                  <span class="team-avatar">J</span>
+                  <strong>Joe</strong>
+                  <span>Production Lead</span>
+                </article>
+                <article class="team-card">
+                  <span class="team-avatar">S</span>
+                  <strong>Shmoe</strong>
+                  <span>Art Wrangler</span>
+                </article>
+                <article class="team-card">
+                  <span class="team-avatar">A</span>
+                  <strong>Alex</strong>
+                  <span>Apparel Specialist</span>
+                </article>
+                <article class="team-card">
+                  <span class="team-avatar">S</span>
+                  <strong>Sam</strong>
+                  <span>Embroidery</span>
+                </article>
+                <article class="team-card">
+                  <span class="team-avatar">T</span>
+                  <strong>Taylor</strong>
+                  <span>Sticker Production</span>
+                </article>
+                <article class="team-card">
+                  <span class="team-avatar">M</span>
+                  <strong>Morgan</strong>
+                  <span>Team Stores</span>
+                </article>
+                <article class="team-card">
+                  <span class="team-avatar">R</span>
+                  <strong>Riley</strong>
+                  <span>Customer Care</span>
+                </article>
+                <article class="team-card">
+                  <span class="team-avatar">C</span>
+                  <strong>Casey</strong>
+                  <span>Finishing</span>
+                </article>
+                <article class="team-card">
+                  <span class="team-avatar">J</span>
+                  <strong>Jordan</strong>
+                  <span>Wide Format</span>
+                </article>
+                <article class="team-card">
+                  <span class="team-avatar">J</span>
+                  <strong>Jamie</strong>
+                  <span>Pickup Coordination</span>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section contact-section" id="contact">
+          <div class="container">
+            <div class="contact-header">
+              <div class="print-tape" style="margin-bottom: 1.5rem;">CONTACT & LOCATION</div>
+              <h2>Ready for a quote, store link, or production question?</h2>
+              <p>Stop by the Snohomish shop, ask a production question, or send details for a new print project. Existing team stores remain available through the store directory.</p>
+            </div>
+
+            <div class="contact-layout">
+              <!-- Contact Info Section -->
+              <div class="contact-info-section">
+                <div class="contact-list">
+                  <a href="tel:360-243-3949" class="contact-item">
+                    <strong>Phone</strong>
+                    <span>360-243-3949</span>
+                  </a>
+                  <a href="mailto:veronica@streamline-llc.net" class="contact-item">
+                    <strong>Email</strong>
+                    <span>veronica@streamline-llc.net</span>
+                  </a>
+                  <a href="https://www.google.com/maps/search/?api=1&query=1822+Bickford+Ave+Suite+E+Snohomish+WA+98290" target="_blank" rel="noreferrer" class="contact-item">
+                    <strong>Shop Location</strong>
+                    <span>1822 Bickford Ave, Suite E<br>Snohomish, WA 98290</span>
+                  </a>
+                </div>
+
+                <a class="btn btn-primary" href="https://www.google.com/maps/dir/?api=1&destination=1822+Bickford+Ave+Suite+E+Snohomish+WA+98290" target="_blank" rel="noreferrer" style="margin-top: 1.5rem; width: 100%;">Get Directions</a>
+              </div>
+
+              <!-- Contact Form Section -->
+              <div class="contact-form-section">
+                <div class="contact-form-wrapper">
+                  <h3>Quick Message</h3>
+                  <form class="contact-form" id="contact-form" data-contact-form>
+                    <label>
+                      <span>Name</span>
+                      <input type="text" name="name" required class="form-input">
+                    </label>
+                    <label>
+                      <span>Email</span>
+                      <input type="email" name="email" required class="form-input">
+                    </label>
+                    <label>
+                      <span>What do you need?</span>
+                      <textarea name="message" rows="5" required class="form-input"></textarea>
+                    </label>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Send Message</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- Shared Premium Footer -->
+      <footer class="footer">
+        <div class="container footer-grid">
+          
+          <div class="footer-col-left">
+            <h2>Streamline Digital Imaging</h2>
+            <p>Custom apparel, screen printing, embroidery, signs, and team stores. Proudly serving Snohomish County high schools, local sports clubs, and small businesses since 2009.</p>
+            <p style="margin-top: 1.5rem; font-size: 0.875rem;">1822 Bickford Ave, Suite E<br>Snohomish, WA 98290</p>
+          </div>
+
+          <div>
+            <div class="footer-col-title">Our Services</div>
+            <ul class="footer-links">
+              <li><a href="#services">Custom Apparel</a></li>
+              <li><a href="#services">Vinyl Stickers</a></li>
+              <li><a href="#services">Embroidery</a></li>
+              <li><a href="#services">Banners &amp; Signs</a></li>
+              <li><a href="#services">Team Stores</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title">Our Shop</div>
+            <ul class="footer-links">
+              <li><a href="#about">About Veronica</a></li>
+              <li><a href="#who-we-serve">Who We Serve</a></li>
+              <li><a href="#quick-buy">Sticker Pricing</a></li>
+              <li><a href="#quick-buy" id="footer-contact-link" data-open-order="custom">Contact Shop</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-col-title">Get in Touch</div>
+            <ul class="footer-links">
+              <li><a href="tel:360-243-3949">📞 360-243-3949</a></li>
+              <li><a href="mailto:veronica@streamline-llc.net">✉️ veronica@streamline-llc.net</a></li>
+              <li><a href="https://instagram.com/streamlinedi" target="_blank">📸 @streamlinedi</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="container footer-bottom">
+          <div>© <span id="footer-year">2026</span> Streamline Digital Imaging. All rights reserved.</div>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms &amp; Conditions</a>
+          </div>
+        </div>
+      </footer>
+
+
+
+    </div>
+    
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
